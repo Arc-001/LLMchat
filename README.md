@@ -35,14 +35,17 @@ The app is built using modern Android development practices with Kotlin, Jetpack
     Open the `LLMApp2` project in Android Studio (latest stable version recommended).
 
 3.  **Download an LLM Model:**
-    This app requires a compatible LLM model in the `.task` format provided by MediaPipe. You can find compatible models (e.g., Gemma 2B) from sources like Kaggle or Google AI.
-    *   Example: [Gemma on Kaggle](https://www.kaggle.com/models/google/gemma/frameworks/mediapipe) (look for a `.task` file).
+    This app requires a compatible LLM model in the `.task` format provided by MediaPipe. You can find compatible models. However as ok making this, the models are gated only for preview users
+    *   https://huggingface.co/google/gemma-3n-E4B-it-litert-preview
 
-4.  **Place the Model File:**
+5.  **Place the Model File:**
     *   You need to push the downloaded `.task` model file to a specific location on your Android device or emulator. The app expects the model at:
         `/data/local/tmp/llm/model_version.task`
     *   You can use Android Debug Bridge (adb) to do this:
         ```bash
+        # Remove preexisting models
+        adb shell rm -i /data/local/tmp/llm
+        
         # Create the directory if it doesn't exist
         adb shell mkdir -p /data/local/tmp/llm
 
@@ -51,7 +54,7 @@ The app is built using modern Android development practices with Kotlin, Jetpack
         ```
     *   **Note:** The `MODEL_PATH` constant in `LlmViewModel.kt` defines this location. If you change it, update the code accordingly.
 
-5.  **Build and Run:**
+6.  **Build and Run:**
     Build and run the application on an Android device or emulator (API Level 35 recommended, as per `minSdk` and `compileSdk`).
 
     *   **Important:** The first time you run the app, or after changing model parameters, the LLM will initialize. This might take some time. The UI will indicate the initialization status.
