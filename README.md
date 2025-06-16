@@ -44,7 +44,7 @@ The app is built using modern Android development practices with Kotlin, Jetpack
     *   You can use Android Debug Bridge (adb) to do this:
         ```bash
         # Remove preexisting models
-        adb shell rm -i /data/local/tmp/llm
+        adb shell rm -r /data/local/tmp/llm
         
         # Create the directory if it doesn't exist
         adb shell mkdir -p /data/local/tmp/llm
