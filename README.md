@@ -98,16 +98,6 @@ The app is built using modern Android development practices with Kotlin, Jetpack
 *   **SharedPreferences:** For storing user preferences and data locally.
 *   **DuckDuckGo API:** For web search functionality (unofficial, via direct HTTP requests).
 
-## Potential Future Improvements
-
-*   **Streaming Responses:** Display LLM responses token by token for a more interactive feel.
-*   **Model Management:** Allow users to select different model files from device storage.
-*   **Advanced Error Handling:** More granular error messages and recovery options.
-*   **UI/UX Enhancements:** Further polish the user interface and experience.
-*   **Export/Import:** Allow exporting and importing of custom personalities and conversation history.
-*   **More Sophisticated Context Management:** Implement more advanced strategies for managing conversation context.
-*   **Testing:** Add comprehensive unit and integration tests.
-
 ---
 
 Feel free to contribute to the project!
